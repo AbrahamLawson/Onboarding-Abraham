@@ -13,7 +13,8 @@ class Circle extends Shape {
        
     }
     public function areaCalculate(){
-        return 3.14159 * $this->area * $this->area;
+       
+        return $this->color. 3.14159 * $this->area * $this->area;
     }
 
 }
@@ -21,11 +22,11 @@ class Rectangle extends Shape {
     protected $height;
     protected $width ;
     public function __construct($color, $height, $width){
-        parent:: __construct($color, $height * $width);
+        parent:: __construct($color, $height,$width);
         $this->height = $height;
         $this->width = $width; 
     }
     public function areaCalculate(){
-        return $this->height * $this->width;
+        return  $this->color.$this->height * $this->width;
     }
 }

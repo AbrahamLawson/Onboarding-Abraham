@@ -1,7 +1,7 @@
 <?php
 require_once "Shape.php";
-$circle = new Circle("Jaune",9);
-$rectangle = new Rectangle("Vert",5,10);
-echo "La surface du cercle est de ". $circle->areaCalculate()."   ";
+$circle = new Circle("Rose",20);
+$rectangle = new Rectangle("Or",2,5);
+echo "La surface du cercle est :"  . $circle->areaCalculate();
 
-echo "La surface du Rectangle est de ". $rectangle->areaCalculate();
+echo "La surface du Rectangle est :" .$rectangle->areaCalculate();
