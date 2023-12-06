@@ -1,29 +1,26 @@
 <?php
 abstract class Vehicule {
-    protected $make;
-    protected $model;
-    public function __construct($make,$model){
+    protected string $make;
+    protected string $model;
+    public function __construct( string $make,string $model){
         $this->make = $make;
         $this->model = $model;
     }
-    abstract function Start();
+    abstract function Start():void;
     
 }
 class Car extends Vehicule {
-    public function __construct($make,$model){
-        parent:: __construct($make,$model);
-       
-    }
-    public function Start(){
-        echo $this->make. "Est allumer"." ". "Fait le".$this->model. '<br>';
+
+    public function Start():void{
+        
+        echo $this->make. "&nbsp". "est allumer"." ". "Fabriquer le".$this->model. '<br>';
     }
 }
 class Motorcycle extends Vehicule{
-    public function __construct($make,$model){
-        parent:: __construct($make,$model);
-    }
-    public function Start(){
-        echo $this->make. "Est allumer"." ". "Fait le".$this->model;
+   
+    public function Start():void{
+        echo $this->make. "&nbsp". "est allumer"." ". "Fabriquer le".$this->model;
       
     }
 }
+
