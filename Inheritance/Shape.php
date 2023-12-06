@@ -1,16 +1,20 @@
 <?php
 class Shape{
     protected $color;
-    protected $area;
-    public function __construct($color,$area){
+    public function __construct( string $color){
         $this->color = $color;
-        $this->area = $area;
     }
+    
 }
 class Circle extends Shape {
-    public function __construct($color,$area){
-        parent:: __construct($color,$area);
+    private $area;
+    public function __construct($color, int $area){
+        $this->area = $area;
+        parent:: __construct($color);
        
+    }
+    public function getArea(){
+        echo $this->area;
     }
     public function areaCalculate(){
        
@@ -19,10 +23,10 @@ class Circle extends Shape {
 
 }
 class Rectangle extends Shape {
-    protected $height;
-    protected $width ;
+    private $height;
+    private $width ;
     public function __construct($color, $height, $width){
-        parent:: __construct($color, $height,$width);
+        parent:: __construct($color);
         $this->height = $height;
         $this->width = $width; 
     }
