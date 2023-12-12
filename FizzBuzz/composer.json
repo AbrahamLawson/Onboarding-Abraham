@@ -1,0 +1,17 @@
+{
+    "name": "abraham/fizz-buzz",
+    "description": "FizzBuzz",
+    "autoload": {
+        "psr-4": {
+            "Abraham\\FizzBuzz\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Abraham"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    }
+}
